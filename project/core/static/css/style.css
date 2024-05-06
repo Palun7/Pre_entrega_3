@@ -4,11 +4,12 @@
 }
 
 body {
+    min-height: 100vh;
+    display: grid;
     background-color: rgb(199, 199, 199);
 }
 
 .todo {
-    height: 100%;
     display: flex;
     flex-flow: column;
 }
@@ -61,13 +62,58 @@ body {
 }
 
 .principal {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2rem;
     padding-left: 3rem;
     padding-top: 3rem;
+}
+
+
+
+.contenedor_nombre {
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 1rem;
+}
+
+.contenedor_fundamento {
+    display: grid;
+    gap: 2rem;
+    align-content: start;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 1rem;
 }
 
 .nombre {
     color: rgb(54, 54, 54);
     padding-bottom: 2rem;
+}
+
+.yo {
+    position: relative;
+    padding-top: 1rem;
+    color: rgb(0, 17, 39);
+    margin-left: 2rem;
+}
+
+.titulo_funda {
+    color: black;
+}
+
+.fundamento {
+    position: relative;
+    color: black;
 }
 
 .links {
@@ -77,16 +123,28 @@ body {
 }
 
 .links_ingreso {
-    display: flex;
-    flex-flow: column;
+    grid-column-start: span 2;
+}
+
+.links_ingreso2 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+
 }
 
 .link_usuario {
-    position: relative;
+    display: grid;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
     text-decoration: none;
     color: rgb(54, 54, 54);
     transition-duration: .5s;
-    left: 4rem;
+    grid-column-start: span 2;
+    grid-row-start: 3;
+    padding: 2rem;
+    place-content: center;
+    font-size: 2rem;
 }
 
 .link_usuario:hover {
@@ -95,34 +153,24 @@ body {
     box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
 }
 
-.yo {
-    position: relative;
-    left: 3rem;
-    padding-top: 2rem;
-    color: rgb(0, 17, 39);
-}
 
-.titulo_funda {
-    padding-top: 8rem;
-    padding-bottom: 1.5rem;
-}
-
-.fundamento {
-    position: relative;
-    color: black;
-    padding-left: 5rem;
-}
 
 .pie {
     background-color: rgb(173, 173, 173);
+    display: grid;
+    grid-template-columns: 5rem 5rem repeat(10, 1fr);
+    padding-left: 2rem;
+}
+
+.instagram {
+    transition-duration: .5s;
+}
+
+.instagram:hover {
+    scale: 1.2;
 }
 
 .contacto {
-    text-decoration: none;
-    color: rgb(150, 0, 150);
-    transition-duration: .3s;
+    color: black;
 }
 
-.contacto:hover {
-    color: rgb(236, 61, 255);
-}

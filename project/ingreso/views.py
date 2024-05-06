@@ -4,6 +4,9 @@ from ingreso.forms import FormIngreso, FormUsuario, FormEgreso
 def index(request):
     return render(request, 'ingreso/index.html')
 
+def registro_index(request):
+    return render(request, "ingreso/registro_index.html")
+
 def ingreso(request):
     if request.method == 'POST':
         form_ingreso = FormIngreso(request.POST)

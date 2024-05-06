@@ -11,14 +11,18 @@
         </div>
         <div class="links">
             <a href="{% url 'core:index' %}" class="link">Inicio</a>
-            <a href="{% url 'registro:index' %}" class="link">Registro</a>
+            <a href="{% url 'ingreso:registro_index' %}" class="link">Registro</a>
         </div>
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Ingreso de personal</h1>
+            <div class="contenedor_nombre">
+                <h1 class="nombre">Ingreso de personal</h1>
+            </div>
             <div class="links_ingreso">
-                <a href="{% url 'ingreso:acceder' %}" class="link_usuario">Registrar Ingreso</a><br>
+                <a href="{% url 'ingreso:acceder' %}" class="link_usuario">Registrar Ingreso</a>
+            </div>
+            <div class="links_ingreso2">
                 <a href="{% url 'ingreso:egreso' %}" class="link_usuario">Registrar Egreso</a>
             </div>
         </main>

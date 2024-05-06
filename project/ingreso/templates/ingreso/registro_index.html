@@ -1,29 +1,26 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Egreso
+    Registro
 {% endblock title %}
 
 {% block content %}
     <nav class="contenedor_nav">
         <div class="navegador">
-            <h2 class="titulo">Control de egreso</h2>
+            <h2 class="titulo">Registro</h2>
         </div>
         <div class="links">
             <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
-            <p><a href="{% url 'ingreso:registro_index' %}" class="link">Registro</a></p>
             <p><a href="{% url 'ingreso:index' %}" class="link">Ingreso</a></p>
-            <p><a href="{% url 'ingreso:acceder' %}" class="link">Acceder</a></p>
         </div>
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Usuario que egresa:</h1>
-            <form action="" method="post">
-                {% csrf_token %}
-                {{ form_egreso }}
-                <button type="submit">Guardar</button>
-            </form>
+            <div class="contenedor_nombre">
+                <h1 class="nombre">Registro de usuarios</h1>
+                <p class="yo"> En esta sección registramos los usuarios</p>
+            </div>
+            <a href="{% url 'ingreso:registro' %}" class="link_usuario">Registrar Usuario</a>
         </main>
     </div>
 {% endblock content %}
