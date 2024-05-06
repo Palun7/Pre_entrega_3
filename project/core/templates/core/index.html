@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Pre-entrega N°3
+{% endblock title %}
+
+{% block content %}
+    <nav class="contenedor_nav">
+        <div class="navegador">
+            <h2 class="titulo">Inicio</h2>
+        </div>
+        <div class="links">
+            <a href="{% url 'registro:index' %}" class="link">Registro</a>
+            <a href="{% url 'ingreso:index' %}" class="link">Ingreso</a>
+        </div>
+    </nav>
+    <div class="cuerpo">
+        <main class="principal">
+            <h1 class="nombre">Pre-entrega N°3</h1>
+            <h2 class="yo">Estudiante: Pablo Martinez</h2>
+            <h3 class="titulo_funda">Fundamento</h3>
+            <p class="fundamento">Este proyecto intenta crear un sistema de registro de personal, control de acceso, control de egreso, ...</p>
+        </main>
+    </div>
+{% endblock content %}

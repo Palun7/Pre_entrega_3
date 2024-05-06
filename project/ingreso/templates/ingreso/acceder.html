@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Ingreso
+{% endblock title %}
+
+{% block content %}
+    <nav class="contenedor_nav">
+        <div class="navegador">
+            <h2 class="titulo">Control de acceso</h2>
+        </div>
+        <div class="links">
+            <a href="{% url 'core:index' %}" class="link">Inicio</a>
+            <a href="{% url 'registro:index' %}" class="link">Registro</a>
+            <a href="{% url 'ingreso:index' %}" class="link">Ingreso</a>
+            <a href="{% url 'ingreso:egreso' %}" class="link">Egreso</a>
+        </div>
+    </nav>
+    <div class="cuerpo">
+        <main class="principal">
+            <h1 class="nombre">Usuario que ingresa:</h1>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form_ingreso }}
+                <button type="submit">Guardar</button>
+            </form>
+        </main>
+    </div>
+{% endblock content %}

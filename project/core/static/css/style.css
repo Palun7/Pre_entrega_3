@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(199, 199, 199);
+}
+
+.todo {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.contenedor_nav {
+    display: flex;
+    align-items: center;
+    height: 2vh;
+    transition-duration: .5s;
+    background-color: rgb(76, 76, 76);
+}
+
+.links {
+    padding-right: 3rem;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition-duration: .5s;
+}
+
+.link:hover {
+    color: chartreuse;
+}
+
+.contenedor_nav:hover {
+    height: 5vh;
+    align-content: center;
+    .titulo {
+        font-size: 2rem;
+    }
+}
+
+.navegador {
+    flex-grow: 20;
+    align-content: center;
+}
+
+.titulo {
+    font-size: 1rem;
+    color: aquamarine;
+    transition-duration: .5s;
+}
+
+.cuerpo {
+    display: flex;
+    flex-grow: 2;
+    height: 90vh;
+}
+
+.principal {
+    padding-left: 3rem;
+    padding-top: 3rem;
+}
+
+.nombre {
+    color: rgb(54, 54, 54);
+    padding-bottom: 2rem;
+}
+
+.links {
+    display: flex;
+    flex-grow: 1;
+    gap: 2rem;
+}
+
+.links_ingreso {
+    display: flex;
+    flex-flow: column;
+}
+
+.link_usuario {
+    position: relative;
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    transition-duration: .5s;
+    left: 4rem;
+}
+
+.link_usuario:hover {
+    color: rgb(0, 255, 8);
+    background-color: rgb(145, 145, 145);
+    box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
+}
+
+.yo {
+    position: relative;
+    left: 3rem;
+    padding-top: 2rem;
+    color: rgb(0, 17, 39);
+}
+
+.titulo_funda {
+    padding-top: 8rem;
+    padding-bottom: 1.5rem;
+}
+
+.fundamento {
+    position: relative;
+    color: black;
+    padding-left: 5rem;
+}
+
+.pie {
+    background-color: rgb(173, 173, 173);
+}
+
+.contacto {
+    text-decoration: none;
+    color: rgb(150, 0, 150);
+    transition-duration: .3s;
+}
+
+.contacto:hover {
+    color: rgb(236, 61, 255);
+}
