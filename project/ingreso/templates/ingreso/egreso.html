@@ -18,11 +18,13 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Usuario que egresa:</h1>
+            <h1 class="nombre_ingreso">Usuario que egresa:</h1>
             <form action="" method="post">
-                {% csrf_token %}
-                {{ form_egreso }}
-                <button type="submit">Guardar</button>
+                <div class="form">
+                    {% csrf_token %}
+                    {{ form_egreso }}
+                </div>
+                <button type="submit" class="guardar">Marcar salida</button>
             </form>
         </main>
     </div>

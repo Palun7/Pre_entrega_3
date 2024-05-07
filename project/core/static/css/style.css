@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: "Sedan SC", serif;
 }
 
 body {
@@ -73,10 +74,14 @@ body {
 
 
 .contenedor_nombre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
-    grid-column-start: span 3;
-    grid-row-start: span 2;
+    grid-column-start: span 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
     box-shadow: 0px 0px 10px 0px black;
     padding: 1rem;
 }
@@ -97,14 +102,14 @@ body {
 
 .nombre {
     color: rgb(54, 54, 54);
-    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
 }
 
 .yo {
-    position: relative;
-    padding-top: 1rem;
+    grid-column-start: 2;
+    grid-row-start: 3;
     color: rgb(0, 17, 39);
-    margin-left: 2rem;
 }
 
 .titulo_funda {
@@ -123,12 +128,13 @@ body {
 }
 
 .links_ingreso {
-    grid-column-start: span 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .links_ingreso2 {
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 2;
 
 }
@@ -140,8 +146,8 @@ body {
     text-decoration: none;
     color: rgb(54, 54, 54);
     transition-duration: .5s;
-    grid-column-start: span 2;
-    grid-row-start: 3;
+    grid-column-start: span 4;
+    grid-row-start: 2;
     padding: 2rem;
     place-content: center;
     font-size: 2rem;
@@ -153,12 +159,52 @@ body {
     box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
 }
 
+.contenedor_sobre_mi {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 2fr 4fr 2fr;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    grid-column-start: 7;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 5;
+}
 
+.contenedor_sobre_mi:hover {
+    .sobre_mi {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+.sobre_mi {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    z-index: 5;
+    background-color: rgb(199, 199, 199);
+    transition-duration: 1s;
+}
+
+.contenedor_mi_foto {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.mi_foto {
+    width: 300px;
+    height: auto;
+}
 
 .pie {
     background-color: rgb(173, 173, 173);
     display: grid;
-    grid-template-columns: 5rem 5rem repeat(10, 1fr);
+    grid-template-columns: 5rem 5rem 5rem 5rem repeat(10, 1fr);
     padding-left: 2rem;
 }
 
@@ -170,7 +216,47 @@ body {
     scale: 1.2;
 }
 
+.facebook {
+    transition-duration: .5s;
+}
+
+.facebook:hover {
+    scale: 1.2;
+}
+
+.github {
+    transition-duration: .5s;
+}
+
+.github:hover {
+    scale: 1.2;
+}
+
 .contacto {
+    font-family: "Poetsen One", sans-serif;
     color: black;
 }
 
+form {
+    grid-column-start: span 2;
+    grid-row-start: 2;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.form {
+    grid-column-start: 2;
+}
+
+.nombre_ingreso {
+    grid-column-start: span 2;
+}
+
+.guardar {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    
+}

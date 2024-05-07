@@ -1,4 +1,5 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block title %}
     Pre-entrega N°3
@@ -21,8 +22,17 @@
                 <h2 class="yo">Estudiante: Pablo Martinez</h2>
             </div>
             <div class="contenedor_fundamento">
-                <h3 class="titulo_funda">Fundamento</h3>
-                <p class="fundamento">Este proyecto intenta crear un sistema de registro de personal, control de acceso, control de egreso, ...</p>
+                <h2 class="titulo_funda">Fundamento</h2>
+                <p class="fundamento">Este proyecto intenta crear un sistema de registro de personal, control de acceso, control de egreso.</p>
+            </div>
+            <div class="contenedor_sobre_mi">
+                <div class="sobre_mi">
+                    <h3 class="sobre_mi_h3">Sobre mi:</h3>
+                    <p class="sobre_mi_p">Soy profesor de educación física y desde siempre me gusto la tecnología, por lo que en febrero de este año me propuse aprender a programar. Y aqui estamos...</p>
+                </div>
+                <div class="contenedor_mi_foto">
+                    <img src="{% static 'img/mi_foto.png' %}" alt="" height="" width="" class="mi_foto">
+                </div>
             </div>
         </main>
     </div>
