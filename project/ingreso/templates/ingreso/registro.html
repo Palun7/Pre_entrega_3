@@ -19,9 +19,11 @@
         <main class="principal">
             <h1 class="nombre">Datos:</h1>
             <form action="" method="post">
-                {% csrf_token %}
-                {{ form_registro }}
-                <button type="submit">Guardar</button>
+                <div class="form_registro">
+                    {% csrf_token %}
+                    {{ form_registro }}
+                </div>
+                <button type="submit" class="guardar_registro">Guardar</button>
             </form>
         </main>
     </div>

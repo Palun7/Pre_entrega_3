@@ -162,13 +162,12 @@ body {
 .contenedor_sobre_mi {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 2fr 4fr 2fr;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px black;
     grid-column-start: 7;
-    grid-column-end: 10;
-    grid-row-start: 2;
+    grid-column-end: 9;
+    grid-row-start: 3;
     grid-row-end: 5;
 }
 
@@ -241,14 +240,22 @@ form {
     grid-column-start: span 2;
     grid-row-start: 2;
     display: grid;
-    gap: 1rem;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 40px 30px 1fr 1fr 1fr;
+}
+
+.form_registro {
+    display: grid;
+}
+
+.guardar_registro {
+    grid-row-start: 3;
 
 }
 
 .form {
     grid-column-start: 2;
+    scale: 1.5;
 }
 
 .nombre_ingreso {
@@ -256,7 +263,6 @@ form {
 }
 
 .guardar {
+    grid-row-start: 3;
     grid-column-start: 2;
-    grid-row-start: 2;
-    
 }
