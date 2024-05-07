@@ -3,4 +3,4 @@
 
 `Bienvenido a mi pre-entrega.`
 
-`Dentro de ingreso esta el registro de personal y control de acceso/egreso.`
+`Dentro de ingreso está el registro de personal y control de acceso/egreso.`
