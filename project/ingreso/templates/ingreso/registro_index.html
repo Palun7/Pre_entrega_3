@@ -12,6 +12,7 @@
         <div class="links">
             <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
             <p><a href="{% url 'ingreso:index' %}" class="link">Ingreso</a></p>
+            <a href="{% url 'ventas:index' %}" class="link">Ventas</a>
         </div>
     </nav>
     <div class="cuerpo">
@@ -20,7 +21,9 @@
                 <h1 class="nombre">Registro de usuarios</h1>
                 <p class="yo"> En esta sección registramos los usuarios</p>
             </div>
-            <a href="{% url 'ingreso:registro' %}" class="link_usuario">Registrar Usuario</a>
+            <div class="links_registro">
+                <a href="{% url 'ingreso:registro' %}" class="link_usuario">Registrar Usuario</a>
+            </div>
         </main>
     </div>
 {% endblock content %}

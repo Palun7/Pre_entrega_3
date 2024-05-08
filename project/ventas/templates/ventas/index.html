@@ -1,31 +1,34 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Ingreso
+    Ventas
 {% endblock title %}
 
 {% block content %}
     <nav class="contenedor_nav">
         <div class="navegador">
-            <h2 class="titulo">Ingreso</h2>
+            <h2 class="titulo">Ventas</h2>
         </div>
         <div class="links">
             <a href="{% url 'core:index' %}" class="link">Inicio</a>
+            <a href="{% url 'ingreso:index' %}" class="link">Ingreso</a>
             <a href="{% url 'ingreso:registro_index' %}" class="link">Registro</a>
-            <a href="{% url 'ventas:index' %}" class="link">Ventas</a>
         </div>
     </nav>
     <div class="cuerpo">
         <main class="principal">
             <div class="contenedor_nombre">
-                <h1 class="nombre">Ingreso de personal</h1>
-                <p class="yo"> En esta sección registramos los ingresos y los egresos</p>
+                <h1 class="nombre">Ventas</h1>
+                <p class="yo">En esta app creamos los clinetes y productos para realizar ventas.</p>
             </div>
             <div class="links_ingreso">
-                <a href="{% url 'ingreso:acceder' %}" class="link_usuario">Registrar Ingreso</a>
+                <a href="{% url 'ventas:nuevocliente' %}" class="link_usuario">Registrar cliente</a>
             </div>
             <div class="links_ingreso2">
-                <a href="{% url 'ingreso:egreso' %}" class="link_usuario">Registrar Egreso</a>
+                <a href="" class="link_usuario">Crear producto</a>
+            </div>
+            <div class="links_ingreso3">
+                <a href="" class="link_usuario">Ventas</a>
             </div>
         </main>
     </div>

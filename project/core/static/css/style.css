@@ -67,7 +67,6 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(10, 1fr);
     gap: 2rem;
-    padding-left: 3rem;
     padding-top: 3rem;
 }
 
@@ -79,7 +78,8 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
-    grid-column-start: span 4;
+    grid-column-start: 4;
+    grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 2;
     box-shadow: 0px 0px 10px 0px black;
@@ -92,10 +92,10 @@ body {
     align-content: start;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 4;
     box-shadow: 0px 0px 10px 0px black;
     padding: 1rem;
 }
@@ -128,15 +128,26 @@ body {
 }
 
 .links_ingreso {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 6;
 }
 
 .links_ingreso2 {
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 8;
     grid-row-start: 2;
+}
 
+.links_ingreso3 {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 3;
+}
+
+.links_registro {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 2;
 }
 
 .link_usuario {
@@ -165,10 +176,10 @@ body {
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px black;
-    grid-column-start: 7;
-    grid-column-end: 9;
-    grid-row-start: 3;
-    grid-row-end: 5;
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 .contenedor_sobre_mi:hover {

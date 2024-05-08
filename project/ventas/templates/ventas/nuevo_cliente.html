@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Nuevo Cliente
+{% endblock title %}
+
+{% block content %}
+    <nav class="contenedor_nav">
+        <div class="navegador">
+            <h2 class="titulo">Nuevo Cliente</h2>
+        </div>
+        <div class="links">
+            <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
+            <p><a href="{% url 'ingreso:registro_index' %}" class="link">Registro</a></p>
+            <p><a href="{% url 'ingreso:index' %}" class="link">Ingreso</a></p>
+            <p><a href="{% url 'ventas:index' %}" class="link">Ventas</a></p>
+        </div>
+    </nav>
+    <div class="cuerpo">
+        <main class="principal">
+            <h1 class="nombre">Datos:</h1>
+            <form action="" method="post">
+                <div class="form_registro">
+                    {% csrf_token %}
+                    {{ form_cliente }}
+                </div>
+                <button type="submit" class="guardar_registro">Guardar</button>
+            </form>
+            <div class="contenedor_localidad">
+                <h3>En caso que su localidad no exista en el sistema puede agregarla.</h3>
+                <p><a href="{% url 'ventas:localidad' %}" class="link">Agregar localidad</a></p>
+            </div>
+        </main>
+    </div>
+{% endblock content %}
