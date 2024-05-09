@@ -29,7 +29,7 @@ def pais(request):
         form_pais = PaisForm(request.POST)
         if form_pais.is_valid():
             form_pais.save()
-            return redirect('ventas:nuevo_producto')
+            return redirect('ventas:index')
     else:
         form_pais = PaisForm()
     return render(request, 'ventas/pais.html', {'form_pais': form_pais})
@@ -59,7 +59,7 @@ def venta(request):
         form_venta = VentaForm(request.POST)
         if form_venta.is_valid():
             form_venta.save()
-            return redirect('ventas:nuevo_producto')
+            return redirect('ventas:index')
     else:
         form_venta = VentaForm()
     return render(request, 'ventas/venta.html', {'form_venta': form_venta})

@@ -18,25 +18,27 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Datos:</h1>
-            <form action="" method="post">
-                <div class="form_registro">
-                    {% csrf_token %}
-                    {{ form_venta }}
-                </div>
-                <button type="submit" class="guardar_registro">Guardar</button>
-            </form>
+            <div class="formulario">
+                <h1 class="nombre_datos">Datos:</h1>
+                <div class="formulario_hijo">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form_venta }}
+                    </div>
+                    <button type="submit" class="guardar_registro">Guardar</button>
+                </form>
+            </div>
             <div class="contenedor_producto">
                 <h3>Si el producto no existe, debes crearlo.</h3>
-                <p><a href="{% url 'ventas:nuevocliente' %}" class="link">Agregar Cliente</a></p>
+                <p><a href="{% url 'ventas:nuevocliente' %}" class="link_localidad">Agregar Producto</a></p>
             </div>
-            <div class="contenedor_marca">
+            <div class="contenedor_cliente">
                 <h3>Si el cliente es nuevo, debes agregarlo.</h3>
-                <p><a href="{% url 'ventas:nuevocliente' %}" class="link">Agregar Cliente</a></p>
+                <p><a href="{% url 'ventas:nuevocliente' %}" class="link_localidad">Agregar Cliente</a></p>
             </div>
-            <div class="contenedor_pais">
+            <div class="contenedor_vendedor">
                 <h3>Si no existe el vendedor, debe registrarse.</h3>
-                <p><a href="{% url 'ingreso:registro' %}" class="link">Agregar Vendedor</a></p>
+                <p><a href="{% url 'ingreso:registro' %}" class="link_localidad">Agregar Vendedor</a></p>
             </div>
         </main>
     </div>

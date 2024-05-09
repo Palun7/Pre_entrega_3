@@ -19,11 +19,11 @@
     <div class="cuerpo">
         <main class="principal">
             <h1 class="nombre_ingreso">Usuario que egresa:</h1>
-            <form action="" method="post">
-                <div class="form">
+            <div class="form">
+                <form action="" method="post">
                     {% csrf_token %}
                     {{ form_egreso }}
-                </div>
+            </div>
                 <button type="submit" class="guardar">Marcar salida</button>
             </form>
         </main>

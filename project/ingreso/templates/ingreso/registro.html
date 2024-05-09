@@ -17,14 +17,18 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Datos:</h1>
-            <form action="" method="post">
-                <div class="form_registro">
-                    {% csrf_token %}
-                    {{ form_registro }}
+            <div class="formulario">
+                <h1 class="nombre_datos">Datos:</h1>
+                <form action="" method="post" class="formulario_hijo">
+                    <div class="form_registro">
+                        {% csrf_token %}
+                        {{ form_registro }}
+                    </div>
+                </form>
+                <div class="guardar_registro">
+                    <button type="submit">Guardar</button>
                 </div>
-                <button type="submit" class="guardar_registro">Guardar</button>
-            </form>
+            </div>
         </main>
     </div>
 {% endblock content %}

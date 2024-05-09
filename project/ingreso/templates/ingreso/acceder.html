@@ -19,12 +19,12 @@
     <div class="cuerpo">
         <main class="principal">
             <h1 class="nombre_ingreso">Usuario que ingresa:</h1>
-            <form action="" method="post">
-                <div class="form">
+            <div class="form">
+                <form action="" method="post">
                     {% csrf_token %}
                     {{ form_ingreso }}
-                </div>
-                <button type="submit" class="guardar">Marcar entrada</button>
+            </div>
+                    <button type="submit" class="guardar">Marcar entrada</button>
             </form>
         </main>
     </div>

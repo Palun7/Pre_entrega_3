@@ -18,17 +18,19 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Datos:</h1>
-            <form action="" method="post">
-                <div class="form_registro">
-                    {% csrf_token %}
-                    {{ form_producto }}
+            <div class="formulario">
+                <h1 class="nombre_datos">Datos:</h1>
+                <div class="formulario_hijo">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form_producto }}
                 </div>
-                <button type="submit" class="guardar_registro">Guardar</button>
-            </form>
+                        <button type="submit" class="guardar_registro">Guardar</button>
+                </form>
+            </div>
             <div class="contenedor_marca">
                 <h3>En caso que la marca no exista, podes agregarla.</h3>
-                <p><a href="{% url 'ventas:marca' %}" class="link">Agregar Marca</a></p>
+                <p><a href="{% url 'ventas:marca' %}" class="link_localidad">Agregar Marca</a></p>
             </div>
         </main>
     </div>

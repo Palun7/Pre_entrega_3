@@ -67,7 +67,7 @@ class Venta(models.Model):
     fecha_hora = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f'compra: {self.producto}, {self.cliente}. vendedor: {self.vendedor}'
+        return f'Compra: {self.producto}. Cliente: {self.cliente}. Vendedor: {self.vendedor}. Fecha: {self.fecha_hora}'
 
     class Meta:
         verbose_name = 'Venta'

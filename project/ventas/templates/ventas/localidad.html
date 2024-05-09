@@ -18,17 +18,19 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <h1 class="nombre">Datos:</h1>
-            <form action="" method="post">
-                <div class="form_registro">
-                    {% csrf_token %}
-                    {{ form_localidad }}
+            <div class="formulario">
+                <h1 class="nombre_datos">Datos:</h1>
+                <div class="formulario_hijo">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        {{ form_localidad }}
                 </div>
-                <button type="submit" class="guardar_registro">Guardar</button>
-            </form>
+                    <button type="submit" class="guardar_registro">Guardar</button>
+                </form>
+            </div>
             <div class="contenedor_pais">
                 <h3>En caso que el pais no exista, podes agregarlo.</h3>
-                <p><a href="{% url 'ventas:pais' %}" class="link">Agregar Pais</a></p>
+                <p><a href="{% url 'ventas:pais' %}" class="link_localidad">Agregar Pais</a></p>
             </div>
         </main>
     </div>
