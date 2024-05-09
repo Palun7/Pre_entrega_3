@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from ventas.forms import NuevoClienteForm, LocalidadForm, PaisForm, NuevoProductoForm, MarcaForm, VentaForm
+from ventas.models import Venta
 
 def index(request):
     return render(request, 'ventas/index.html')
@@ -63,3 +64,7 @@ def venta(request):
     else:
         form_venta = VentaForm()
     return render(request, 'ventas/venta.html', {'form_venta': form_venta})
+
+def listaventas(request):
+    lista_ventas = Venta.objects.all()
+    return render(request, 'ventas/lista_ventas.html', {'lista_ventas': lista_ventas})

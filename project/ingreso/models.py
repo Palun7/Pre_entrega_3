@@ -5,7 +5,7 @@ class Usuario(models.Model):
     nombre = models.CharField(max_length=50, verbose_name='Nombre')
     nacimiento = models.DateField(verbose_name='Fecha de nacimiento')
     puesto = models.CharField(max_length=50, verbose_name='Puesto')
-    fecha_ingreso = models.DateField(verbose_name='Fecha de ingreso')
+    fecha_ingreso = models.DateField(verbose_name='Ingreso a la empresa')
 
     def __str__(self):
         return self.nombre

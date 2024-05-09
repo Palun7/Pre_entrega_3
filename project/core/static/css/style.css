@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    font-family: "Sedan SC", serif;
+    font-family: "Crimson Text", serif;
 }
 
 body {
@@ -29,7 +29,7 @@ body {
 
 .link {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     transition-duration: .5s;
 }
 
@@ -74,8 +74,50 @@ body {
 
 .contenedor_nombre {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 1rem;
+}
+
+.contenedor_nombre_ingreso {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr ;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 1rem;
+}
+
+.contenedor_nombre_registro {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    box-shadow: 0px 0px 10px 0px black;
+    padding: 1rem;
+}
+
+.contenedor_nombre_ventas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
     grid-column-start: 4;
@@ -101,6 +143,28 @@ body {
 }
 
 .nombre {
+    grid-column-start: span 2;
+    color: rgb(20, 20, 20);
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+
+.nombre_registro {
+    grid-column-start: span 2;
+    color: rgb(20, 20, 20);
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+
+.nombre_ingreso {
+    grid-column-start: span 2;
+    color: rgb(20, 20, 20);
+    padding-top: 1rem;
+    padding-left: 2rem;
+}
+
+.nombre_ventas {
+    grid-column-start: span 2;
     color: rgb(20, 20, 20);
     padding-top: 2rem;
     padding-left: 2rem;
@@ -108,8 +172,36 @@ body {
 
 .yo {
     grid-column-start: 2;
-    grid-row-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
     color: rgb(0, 17, 39);
+    padding-top: 2rem;
+}
+
+.yo_registro {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    color: rgb(0, 17, 39);
+    padding-top:2.5rem;
+}
+
+.yo_ingreso {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    color: rgb(0, 17, 39);
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.yo_ventas {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    color: rgb(0, 17, 39);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .titulo_funda {
@@ -144,6 +236,12 @@ body {
     grid-column-start: 4;
     grid-column-end: 8;
     grid-row-start: 3;
+}
+
+.links_ingreso4 {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 4;
 }
 
 .links_registro {
@@ -283,12 +381,6 @@ body {
     scale: 1.5;
 }
 
-.nombre_ingreso {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 1;
-}
-
 .guardar {
     grid-column-start: 4;
     grid-row-start: 3;
@@ -394,4 +486,19 @@ body {
     box-shadow: 0px 0px 2px 1px black;
     height: 130px;
     padding: 1rem;
+}
+
+.lista_ventas {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.lista {
+    display: flex;
+    flex-flow: column;
+    border: solid 2px black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px .5px black;
+    padding: 1rem;
+    gap: 1rem;
 }

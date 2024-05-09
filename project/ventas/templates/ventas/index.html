@@ -17,9 +17,9 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <div class="contenedor_nombre">
-                <h1 class="nombre">Ventas</h1>
-                <p class="yo">En esta app creamos los clinetes y productos para realizar ventas.</p>
+            <div class="contenedor_nombre_ventas">
+                <h1 class="nombre_ventas">Ventas</h1>
+                <p class="yo_ventas">En esta app creamos los clinetes, los productos, se realizan ventas y se puede ver el listado de ventas.</p>
             </div>
             <div class="links_ingreso">
                 <a href="{% url 'ventas:nuevocliente' %}" class="link_usuario">Registrar cliente</a>
@@ -29,6 +29,9 @@
             </div>
             <div class="links_ingreso3">
                 <a href="{% url 'ventas:venta' %}" class="link_usuario">Ventas</a>
+            </div>
+            <div class="links_ingreso4">
+                <a href="{% url 'ventas:lista_ventas' %}" class="link_usuario">Ver listado de Ventas</a>
             </div>
         </main>
     </div>
