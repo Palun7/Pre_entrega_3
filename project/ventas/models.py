@@ -2,8 +2,19 @@ from django.db import models
 from django.core.validators import RegexValidator
 from ingreso.models import Usuario
 
+class Pais(models.Model):
+    pais = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Ese pais ya existe en el sistema.'})
+
+    def __str__(self):
+        return self.pais
+
+    class Meta:
+        verbose_name = 'Paises'
+        verbose_name_plural = 'Paises'
+
 class Localidad(models.Model):
     localidad = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Esa ciudad ya existe en el sistema.'})
+    pais = models.ForeignKey(Pais, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.localidad
@@ -11,6 +22,17 @@ class Localidad(models.Model):
     class Meta:
         verbose_name = 'Localidad'
         verbose_name_plural = 'Localidades'
+
+class Marca(models.Model):
+    nombre = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Esa marca ya esta registrada.'})
+    pais_origen = models.ForeignKey(Pais, on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name = 'Marca'
+        verbose_name_plural = 'Marcas'
 
 class NuevoCliente(models.Model):
     nombre = models.CharField(max_length=50)
@@ -26,31 +48,9 @@ class NuevoCliente(models.Model):
         verbose_name = 'Cliente'
         verbose_name_plural = 'Clientes'
 
-class Pais(models.Model):
-    pais = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Ese pais ya existe en el sistema.'})
-
-    def __str__(self):
-        return self.pais
-
-    class Meta:
-        verbose_name = 'Paises'
-        verbose_name_plural = 'Paises'
-
-class Marca(models.Model):
-    nombre = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Esa marca ya esta registrada.'})
-    pais_origen = models.ForeignKey(Pais, on_delete=models.CASCADE, null=True, blank=True)
-
-    def __str__(self):
-        return self.nombre
-
-    class Meta:
-        verbose_name = 'Marca'
-        verbose_name_plural = 'Marcas'
-
 class NuevoProducto(models.Model):
     nombre = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Ese producto ya esta registrado.'})
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE, null=True, blank=True)
-    pais_origen = models.ForeignKey(Pais, on_delete=models.CASCADE, null=True, blank=True)
     precio = models.IntegerField()
 
     def __str__(self):
@@ -61,8 +61,8 @@ class NuevoProducto(models.Model):
         verbose_name_plural = 'Productos'
 
 class Venta(models.Model):
-    cliente = models.ForeignKey(NuevoCliente, on_delete=models.PROTECT)
     producto = models.ForeignKey(NuevoProducto, on_delete=models.PROTECT)
+    cliente = models.ForeignKey(NuevoCliente, on_delete=models.PROTECT)
     vendedor = models.ForeignKey(Usuario,on_delete=models.PROTECT)
     fecha_hora = models.DateTimeField(auto_now_add=True)
 

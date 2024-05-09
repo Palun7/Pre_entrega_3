@@ -26,6 +26,10 @@
                 </div>
                 <button type="submit" class="guardar_registro">Guardar</button>
             </form>
+            <div class="contenedor_producto">
+                <h3>Si el producto no existe, debes crearlo.</h3>
+                <p><a href="{% url 'ventas:nuevocliente' %}" class="link">Agregar Cliente</a></p>
+            </div>
             <div class="contenedor_marca">
                 <h3>Si el cliente es nuevo, debes agregarlo.</h3>
                 <p><a href="{% url 'ventas:nuevocliente' %}" class="link">Agregar Cliente</a></p>
