@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from ingreso.forms import FormIngreso, FormUsuario, FormEgreso
+from ingreso.models import Usuario
 
 def index(request):
     return render(request, 'ingreso/index.html')
@@ -36,3 +37,7 @@ def egreso(request):
     else:
         form_egreso = FormEgreso()
     return render(request, 'ingreso/egreso.html', {'form_egreso': form_egreso})
+
+def listausuarios(request):
+    lista_usuarios = Usuario.objects.all()
+    return render(request, 'ingreso/lista_usuarios.html', {'lista_usuarios': lista_usuarios})

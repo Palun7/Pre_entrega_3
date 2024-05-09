@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+    Lista de Clientes
+{% endblock title %}
+
+{% block content %}
+    <nav class="contenedor_nav">
+        <div class="navegador">
+            <h2 class="titulo">Clientes Registrados</h2>
+        </div>
+        <div class="links">
+            <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
+            <p><a href="{% url 'ingreso:registro_index' %}" class="link">Registro</a></p>
+            <p><a href="{% url 'ingreso:index' %}" class="link">Ingreso</a></p>
+            <p><a href="{% url 'ventas:index' %}" class="link">Ventas</a></p>
+        </div>
+    </nav>
+    <div class="cuerpo">
+        <main class="principal">
+            <div class="lista_ventas">
+                {% for lista in lista_clientes %}
+                <ul class="lista">
+                    <li>Nombre: {{ lista.nombre }}</li>
+                    <li>DNI: {{lista.DNI}}</li>
+                    <li>Fecha de nacimiento: {{lista.fecha_nacimiento}}</li>
+                    <li>Dirección: {{lista.direccion}}</li>
+                    <li>Localidad: {{lista.localidad}}</li>
+                </ul>
+                <br>
+                {% endfor %}
+            </div>
+        </main>
+    </div>
+{% endblock content %}

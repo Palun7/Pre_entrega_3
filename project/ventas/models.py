@@ -36,13 +36,13 @@ class Marca(models.Model):
 
 class NuevoCliente(models.Model):
     nombre = models.CharField(max_length=50)
-    DNI = models.CharField(max_length=8,validators=[RegexValidator(r'^\d{7,8}$', 'Ingrese un máximo de 8 dígitos.')], unique=True, error_messages={'unique': 'El DNI debe ir sin puntos'})
+    dni = models.CharField(max_length=8,validators=[RegexValidator(r'^\d{7,8}$', 'Ingrese un máximo de 8 dígitos.')], unique=True, error_messages={'unique': 'El DNI debe ir sin puntos'})
     fecha_nacimiento = models.DateField()
     direccion = models.CharField(max_length=100)
     localidad = models.ForeignKey(Localidad, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return f'{self.nombre}, DNI: {self.DNI}'
+        return f'{self.nombre}, DNI: {self.dni}'
 
     class Meta:
         verbose_name = 'Cliente'

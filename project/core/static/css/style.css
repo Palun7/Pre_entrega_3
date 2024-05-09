@@ -244,10 +244,28 @@ body {
     grid-row-start: 4;
 }
 
+.links_ingreso5 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+}
+
+.links_ingreso6 {
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 2;
+}
+
 .links_registro {
     grid-column-start: 4;
     grid-column-end: 8;
     grid-row-start: 2;
+}
+
+.links_registro1 {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 3;
 }
 
 .link_usuario {
@@ -259,7 +277,7 @@ body {
     transition-duration: .5s;
     grid-column-start: span 4;
     grid-row-start: 2;
-    padding: 2rem;
+    padding: 1rem;
     place-content: center;
     font-size: 2rem;
 }
