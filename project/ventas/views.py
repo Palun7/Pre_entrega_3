@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from ventas.forms import NuevoClienteForm, LocalidadForm, PaisForm, NuevoProductoForm, MarcaForm
+from ventas.forms import NuevoClienteForm, LocalidadForm, PaisForm, NuevoProductoForm, MarcaForm, VentaForm
 
 def index(request):
     return render(request, 'ventas/index.html')
@@ -53,3 +53,13 @@ def marca(request):
     else:
         form_marca = MarcaForm()
     return render(request, 'ventas/marca.html', {'form_marca': form_marca})
+
+def venta(request):
+    if request.method == 'POST':
+        form_venta = VentaForm(request.POST)
+        if form_venta.is_valid():
+            form_venta.save()
+            return redirect('ventas:nuevo_producto')
+    else:
+        form_venta = VentaForm()
+    return render(request, 'ventas/venta.html', {'form_venta': form_venta})

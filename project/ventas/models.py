@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import RegexValidator
+from ingreso.models import Usuario
 
 class Localidad(models.Model):
     localidad = models.CharField(max_length=100, unique=True, error_messages={'unique': 'Esa ciudad ya existe en el sistema.'})
@@ -53,8 +54,21 @@ class NuevoProducto(models.Model):
     precio = models.IntegerField()
 
     def __str__(self):
-        return f'{self.nombre}: ${self.precio}'
+        return f'{self.marca}, {self.nombre}: ${self.precio}'
 
     class Meta:
         verbose_name = 'Producto'
         verbose_name_plural = 'Productos'
+
+class Venta(models.Model):
+    cliente = models.ForeignKey(NuevoCliente, on_delete=models.PROTECT)
+    producto = models.ForeignKey(NuevoProducto, on_delete=models.PROTECT)
+    vendedor = models.ForeignKey(Usuario,on_delete=models.PROTECT)
+    fecha_hora = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'compra: {self.producto}, {self.cliente}. vendedor: {self.vendedor}'
+
+    class Meta:
+        verbose_name = 'Venta'
+        verbose_name_plural = 'Ventas'

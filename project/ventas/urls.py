@@ -1,5 +1,5 @@
 from django.urls import path
-from ventas.views import index, nuevocliente, localidad, pais, nuevoproducto, marca
+from ventas.views import index, nuevocliente, localidad, pais, nuevoproducto, marca, venta
 
 app_name = 'ventas'
 
@@ -10,4 +10,5 @@ urlpatterns = [
     path('ventas/pais', pais, name='pais'),
     path('ventas/nuevoproducto', nuevoproducto, name='nuevo_producto'),
     path('ventas/marca', marca, name='marca'),
+    path('ventas/venta', venta, name='venta'),
 ]
