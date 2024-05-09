@@ -95,13 +95,13 @@ body {
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 7;
     box-shadow: 0px 0px 10px 0px black;
     padding: 1rem;
 }
 
 .nombre {
-    color: rgb(54, 54, 54);
+    color: rgb(20, 20, 20);
     padding-top: 2rem;
     padding-left: 2rem;
 }
@@ -117,6 +117,8 @@ body {
 }
 
 .fundamento {
+    grid-row-start: 3;
+    grid-row-end: 6;
     position: relative;
     color: black;
 }
@@ -179,7 +181,7 @@ body {
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 7;
 }
 
 .contenedor_sobre_mi:hover {
