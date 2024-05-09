@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Nueva Localidad
+    Nuevo Producto
 {% endblock title %}
 
 {% block content %}
     <nav class="contenedor_nav">
         <div class="navegador">
-            <h2 class="titulo">Nueva Localidad</h2>
+            <h2 class="titulo">Nuevo Producto</h2>
         </div>
         <div class="links">
             <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
@@ -22,10 +22,18 @@
             <form action="" method="post">
                 <div class="form_registro">
                     {% csrf_token %}
-                    {{ form_localidad }}
+                    {{ form_producto }}
                 </div>
                 <button type="submit" class="guardar_registro">Guardar</button>
             </form>
+            <div class="contenedor_marca">
+                <h3>En caso que la marca no exista, podes agregarla.</h3>
+                <p><a href="{% url 'ventas:marca' %}" class="link">Agregar Marca</a></p>
+            </div>
+            <div class="contenedor_pais">
+                <h3>En caso que el pais no exista, podes agregarlo.</h3>
+                <p><a href="{% url 'ventas:pais' %}" class="link">Agregar Pais</a></p>
+            </div>
         </main>
     </div>
 {% endblock content %}

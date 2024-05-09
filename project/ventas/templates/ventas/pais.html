@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Nueva Localidad
+    Nuevo Pais
 {% endblock title %}
 
 {% block content %}
     <nav class="contenedor_nav">
         <div class="navegador">
-            <h2 class="titulo">Nueva Localidad</h2>
+            <h2 class="titulo">Nuevo Pais</h2>
         </div>
         <div class="links">
             <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
@@ -22,7 +22,7 @@
             <form action="" method="post">
                 <div class="form_registro">
                     {% csrf_token %}
-                    {{ form_localidad }}
+                    {{ form_pais }}
                 </div>
                 <button type="submit" class="guardar_registro">Guardar</button>
             </form>
