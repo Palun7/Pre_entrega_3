@@ -11,7 +11,7 @@
 > Por otro lado los modelos Ingreso y Egreso son para control de acceso, donde marcan la entrada o salida de su turno de trabajo.
 
 
-`Dentro de ventas se puede agregar los productos, los clientes y efectuar las ventas.`
+`Dentro de ventas se pueden agregar los productos, los clientes y efectuar las ventas.`
 
 > En ventas tenemos los modelos NuevoCliente, que registra los clientes.
 > El modelo NuevoProducto que carga los productos para vender.
@@ -23,7 +23,5 @@
 > Dentro de la lista de Clientes podemos buscarlos por nombre.
 
 `En un futuro se podría:`
-> Crear un área de venta donde el cliente pueda iniciar sesion y comprar él y no tenga que intervenir el "vendedor".
-> En la misma área antes mencionada se podría crear una sección de consulta donde el cliente envía la consulta al vendedor y este le responde por mail u otro medio.
-
-`Para entrar al admin: Usuario: palun, contraseña: 123456789`
+> Crear un área de venta donde el cliente pueda iniciar sesión, comprar él y no tenga que intervenir el "vendedor".
+> En la misma área, antes mencionada, se podría crear una sección de consulta donde el cliente envía la consulta al vendedor y este le responde por mail u otro medio.

@@ -20,14 +20,14 @@
         <main class="principal">
             <div class="busqueda">
                 <form action="{% url 'ventas:lista_clientes' %}" method="get">
-                    <input type="text" name="busqueda" placeholder="Buscar clientes..." class="texto_busqueda">
+                    <input type="text" name="busqueda" placeholder="Buscar cliente..." class="texto_busqueda">
                 </form>
             </div>
             <div class="lista_ventas">
                 {% for lista in lista_clientes %}
                 <ul class="lista">
                     <li>Nombre: {{ lista.nombre }}</li>
-                    <li>DNI: {{lista.DNI}}</li>
+                    <li>DNI: {{lista.dni}}</li>
                     <li>Fecha de nacimiento: {{lista.fecha_nacimiento}}</li>
                     <li>Dirección: {{lista.direccion}}</li>
                     <li>Localidad: {{lista.localidad}}</li>
