@@ -28,6 +28,10 @@
                     <button type="submit" class="guardar_registro">Guardar</button>
                 </form>
             </div>
+            <div class="contenedor_editar">
+                <h3>Ver productos para editarlos.</h3>
+                <a href="{% url 'ventas:lista_productos' %}" class="link_localidad">Ver listado de Productos</a>
+            </div>
             <div class="contenedor_producto">
                 <h3>Si el producto no existe, debes crearlo.</h3>
                 <p><a href="{% url 'ventas:nuevo_producto' %}" target="_blank" class="link_localidad">Agregar Producto</a></p>

@@ -76,3 +76,14 @@ def listaclientes(request):
 def listaproductos(request):
     lista_productos = NuevoProducto.objects.all()
     return render(request, 'ventas/lista_productos.html', {'lista_productos': lista_productos})
+
+def cambiarprecio(request, pk):
+    consulta = NuevoProducto.objects.get(id=pk)
+    if request.method == "POST":
+        form_precio = NuevoProductoForm(request.POST, instance=consulta)
+        if form_precio.is_valid():
+            form_precio.save()
+            return redirect("ventas:venta")
+    else:
+        form_precio = NuevoProductoForm(instance=consulta)
+    return render(request, "ventas/cambiar_precio.html", {"form_precio": form_precio})
