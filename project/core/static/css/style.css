@@ -538,11 +538,33 @@ body {
 }
 
 .lista_ventas {
-    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 2;
+    grid-row-end: 8;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.busqueda {
+    align-self: center;
+    grid-column-start: 1;
     grid-column-end: 4;
+    grid-row-start: 1;
+    padding-left: 1rem;
+}
+
+.texto_busqueda {
+    font-size: 2rem;
+    color: rgb(38, 253, 121);
+    background-color: rgb(27, 27, 27);
 }
 
 .lista {
+    grid-row-start: 1;
     display: flex;
     flex-flow: column;
     border: solid 2px black;

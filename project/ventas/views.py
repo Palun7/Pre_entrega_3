@@ -70,8 +70,12 @@ def listaventas(request):
     return render(request, 'ventas/lista_ventas.html', {'lista_ventas': lista_ventas})
 
 def listaclientes(request):
-    lista_clientes = NuevoCliente.objects.all()
-    return render(request, 'ventas/lista_clientes.html', {'lista_clientes': lista_clientes})
+    busqueda = request.GET.get('busqueda', None)
+    if busqueda:
+        consulta = NuevoCliente.objects.filter(nombre__icontains=busqueda)
+    else:
+        consulta = NuevoCliente.objects.all()
+    return render(request, 'ventas/lista_clientes.html', {'lista_clientes': consulta})
 
 def listaproductos(request):
     lista_productos = NuevoProducto.objects.all()
@@ -87,3 +91,4 @@ def cambiarprecio(request, pk):
     else:
         form_precio = NuevoProductoForm(instance=consulta)
     return render(request, "ventas/cambiar_precio.html", {"form_precio": form_precio})
+

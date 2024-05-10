@@ -18,6 +18,11 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
+            <div class="busqueda">
+                <form action="{% url 'ventas:lista_clientes' %}" method="get">
+                    <input type="text" name="busqueda" placeholder="Buscar clientes..." class="texto_busqueda">
+                </form>
+            </div>
             <div class="lista_ventas">
                 {% for lista in lista_clientes %}
                 <ul class="lista">
