@@ -1,4 +1,4 @@
-# Pre-entrega N°3
+# Pre-entrega N°3 del curso de Python - CoderHouse
 # Comision: 54140
 # Estudiante: Pablo Martinez
 
