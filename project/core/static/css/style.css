@@ -31,6 +31,7 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 .link:hover {
@@ -283,9 +284,38 @@ body {
     padding: 1rem;
     place-content: center;
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .link_usuario:hover {
+    color: rgb(0, 255, 8);
+    background-color: rgb(145, 145, 145);
+    box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
+}
+
+.link_usuario_ventas {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(9, 9, 9);
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(54, 54, 54);
+    transition-duration: .5s;
+    grid-column-start: span 4;
+    grid-row-start: 2;
+    padding: 1rem;
+    place-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.link_usuario_ventas img {
+    padding-left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.link_usuario_ventas:hover {
     color: rgb(0, 255, 8);
     background-color: rgb(145, 145, 145);
     box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
@@ -328,6 +358,7 @@ body {
 }
 
 .mi_foto {
+    border-radius: 10px;
     width: 300px;
     height: auto;
 }
@@ -341,6 +372,7 @@ body {
 
 .instagram {
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 .instagram:hover {
@@ -349,6 +381,8 @@ body {
 
 .facebook {
     transition-duration: .5s;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 .facebook:hover {
@@ -357,6 +391,7 @@ body {
 
 .github {
     transition-duration: .5s;
+    cursor: pointer;
 }
 
 .github:hover {
@@ -431,6 +466,7 @@ body {
     transition-duration: .5s;
     margin-left: 8rem;
     padding: 5px;
+    cursor: pointer;
 }
 
 .link_localidad:hover {
@@ -555,6 +591,7 @@ body {
     grid-column-end: 4;
     grid-row-start: 1;
     padding-left: 1rem;
+    overflow: none;
 }
 
 .texto_busqueda {
@@ -575,9 +612,10 @@ body {
 }
 
 .lista_productos {
+    grid-row-start: 1;
     display: grid;
     grid-template-columns: 150px 80px;
-    grid-template-rows: repeat(3, 10px);
+    grid-template-rows: repeat(3, 25px);
     border: solid 2px black;
     border-radius: 5px;
     box-shadow: 0px 0px 5px .5px black;
@@ -600,7 +638,7 @@ body {
 
 .link_usuario1 {
     display: grid;
-    grid-row-start: span 3;
+    grid-row-start: 1;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
     text-decoration: none;
@@ -609,6 +647,7 @@ body {
     padding: 1rem;
     place-content: center;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .link_usuario1:hover {
