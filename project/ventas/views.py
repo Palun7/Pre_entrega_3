@@ -74,7 +74,7 @@ def listaclientes(request):
     busqueda = request.GET.get('busqueda', None)
     consulta = NuevoCliente.objects.all()
     if busqueda:
-        consulta = NuevoCliente.objects.filter(Q(nombre__icontains=busqueda)|Q(dni__icontains=busqueda)|Q(fecha_nacimiento__icontains=busqueda)|Q(direccion__icontains=busqueda)|Q(localidad__localidad__icontains=busqueda))
+        consulta = NuevoCliente.objects.filter(Q(nombre__icontains=busqueda)|Q(dni__icontains=busqueda)|Q(direccion__icontains=busqueda)|Q(localidad__localidad__icontains=busqueda))
     else:
         consulta = NuevoCliente.objects.all()
     return render(request, 'ventas/lista_clientes.html', {'lista_clientes': consulta})

@@ -18,15 +18,18 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <div class="formulario">
+            <div class="formulario_cliente">
                 <h1 class="nombre_datos">Datos:</h1>
                 <div class="formulario_hijo">
                     <form action="" method="post">
                         {% csrf_token %}
                         {{ form_marca }}
+                        <button type="submit" class="guardar_registro">Guardar</button>
+                    </form>
                 </div>
-                    <button type="submit" class="guardar_registro">Guardar</button>
-                </form>
+            </div>
+            <div class="explicacion">
+                <p>En esta sección creamos la marca para los productos.</p>
             </div>
             <div class="contenedor_pais">
                 <h3>En caso que el pais no exista, podes agregarlo.</h3>

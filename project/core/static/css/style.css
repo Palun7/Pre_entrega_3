@@ -18,7 +18,7 @@ body {
 .contenedor_nav {
     display: flex;
     align-items: center;
-    height: 2vh;
+    height: 20px;
     transition-duration: .5s;
     background-color: rgb(76, 76, 76);
 }
@@ -37,12 +37,12 @@ body {
 .link:hover {
     color: chartreuse;
     background-color: rgb(34, 34, 34);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     border-radius: 4px;
 }
 
 .contenedor_nav:hover {
-    height: 5vh;
+    height: 60px;
     align-content: center;
     .titulo {
         font-size: 2rem;
@@ -86,7 +86,7 @@ body {
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 2;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
 }
 
@@ -100,7 +100,7 @@ body {
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 2;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
 }
 
@@ -114,7 +114,7 @@ body {
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 2;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
 }
 
@@ -128,7 +128,7 @@ body {
     grid-column-end: 8;
     grid-row-start: 1;
     grid-row-end: 2;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
 }
 
@@ -142,7 +142,7 @@ body {
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 7;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
 }
 
@@ -183,8 +183,8 @@ body {
 }
 
 .yo_registro {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 2;
     color: rgb(0, 17, 39);
     padding-top:2.5rem;
@@ -200,8 +200,8 @@ body {
 }
 
 .yo_ventas {
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 5;
     grid-row-start: 2;
     color: rgb(0, 17, 39);
     padding-top: 1rem;
@@ -290,7 +290,7 @@ body {
 .link_usuario:hover {
     color: rgb(0, 255, 8);
     background-color: rgb(145, 145, 145);
-    box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
+    box-shadow: 5px 5px 10px 1px black;
 }
 
 .link_usuario_ventas {
@@ -318,7 +318,7 @@ body {
 .link_usuario_ventas:hover {
     color: rgb(0, 255, 8);
     background-color: rgb(145, 145, 145);
-    box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
+    box-shadow: 5px 5px 10px 1px black;
 }
 
 .contenedor_sobre_mi {
@@ -326,7 +326,7 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
     border: 2px solid rgb(9, 9, 9);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px black;
+    box-shadow: 5px 5px 10px 1px black;
     grid-column-start: 6;
     grid-column-end: 8;
     grid-row-start: 2;
@@ -341,6 +341,7 @@ body {
 }
 
 .sobre_mi {
+    backdrop-filter: blur();
     display: grid;
     grid-template-rows: 1fr 4fr;
     grid-column-start: 2;
@@ -404,11 +405,47 @@ body {
 }
 
 .formulario {
+    scale: 1.5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    display: grid;
+    gap: 1rem;
+}
+
+.formulario_cliente {
+    margin-top: 30px;
+    scale: 1.2;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     display: grid;
     gap: 1rem;
+}
+
+.formulario_registro {
+    margin-top: 30px;
+    scale: 1.2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    display: grid;
+    gap: 1rem;
+}
+
+.formulario_ventas {
+    margin-top: 30px;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    display: grid;
+    gap: 1rem;
+}
+
+.formulario_egreso {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
 }
 
 .nombre_datos {
@@ -420,40 +457,65 @@ body {
 .formulario_hijo {
     grid-column-start: 3;
     grid-row-start: 2;
+    display: flex;
+    flex-flow: column;
+    row-gap: 5px;
+}
+
+.explicacion {
+    padding: 15px;
+    border: solid 2px black;
+    border-radius: 8px;
+    display: flex;
+    flex-flow: column;
+    row-gap: 30px;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    box-shadow: 5px 5px 10px 1px black;
+    box-sizing: border-box;
+    height: fit-content;
+    align-self: flex-start;
 }
 
 .form_registro {
     display: grid;
+    row-gap: 10px;
 }
 
-.guardar_registro {
-    grid-column-start: 3;
-    grid-row-start: 3;
+.form_producto {
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
 }
 
 .form {
     grid-column-start: 4;
     grid-row-start: 2;
-    scale: 1.5;
 }
 
 .guardar {
     grid-column-start: 4;
     grid-row-start: 3;
-    height: 30px;
-    width: 150px;
+    height: 20px;
+    width: 110px;
+}
+
+.guardar_registro {
+    margin-top: 10px;
 }
 
 .contenedor_localidad {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 6;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -472,19 +534,20 @@ body {
 .link_localidad:hover {
     color: rgb(0, 255, 8);
     background-color: rgb(145, 145, 145);
-    box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
+    box-shadow: 5px 5px 10px 1px black;
 }
 
 .contenedor_marca {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 6;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -492,13 +555,13 @@ body {
 .contenedor_producto {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: span 2;
+    grid-row-start: 6;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -506,13 +569,13 @@ body {
 .contenedor_cliente {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: span 2;
+    grid-row-start: 6;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -526,7 +589,7 @@ body {
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -534,13 +597,13 @@ body {
 .contenedor_vendedor {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: span 2;
+    grid-row-start: 6;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -548,27 +611,29 @@ body {
 .contenedor_editar {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-row-start: 6;
+    grid-column-start: span 2;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
+    margin-left: 150px;
 }
 
 .contenedor_pais {
     display: flex;
     flex-flow: column;
-    grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
     gap: 2rem;
     border: 2px solid black;
     border-radius: 5px;
     color: rgb(0, 0, 0);
-    box-shadow: 0px 0px 2px 1px black;
+    box-shadow: 5px 5px 10px 1px black;
     height: 130px;
     padding: 1rem;
 }
@@ -591,13 +656,15 @@ body {
     grid-column-end: 4;
     grid-row-start: 1;
     padding-left: 1rem;
-    overflow: none;
 }
 
 .texto_busqueda {
     font-size: 2rem;
     color: rgb(38, 253, 121);
     background-color: rgb(27, 27, 27);
+    border: none;
+    outline: none;
+    border-radius: 7px;
 }
 
 .lista {
@@ -606,7 +673,7 @@ body {
     flex-flow: column;
     border: solid 2px black;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px .5px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
     gap: 1rem;
 }
@@ -618,7 +685,7 @@ body {
     grid-template-rows: repeat(3, 25px);
     border: solid 2px black;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px .5px black;
+    box-shadow: 5px 5px 10px 1px black;
     padding: 1rem;
     row-gap: .7rem;
 }
@@ -653,5 +720,5 @@ body {
 .link_usuario1:hover {
     color: rgb(0, 255, 8);
     background-color: rgb(145, 145, 145);
-    box-shadow: 0px 0px 5px 5px rgb(54, 54, 54);
+    box-shadow: 5px 5px 10px 1px black;
 }

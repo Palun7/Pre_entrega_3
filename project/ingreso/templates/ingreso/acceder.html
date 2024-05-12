@@ -20,13 +20,16 @@
     <div class="cuerpo">
         <main class="principal">
             <h1 class="nombre_ingreso">Usuario que ingresa:</h1>
-            <div class="form">
-                <form action="" method="post">
+            <div class="formulario">
+                <form action="" method="post" class="formulario_egreso">
                     {% csrf_token %}
                     {{ form_ingreso }}
-            </div>
                     <button type="submit" class="guardar">Marcar entrada</button>
-            </form>
+                </form>
+            </div>
+            <div class="explicacion">
+                <p>En esta sección marcan la entrada del turno de trabajo.</p>
+            </div>
         </main>
     </div>
 {% endblock content %}

@@ -18,15 +18,18 @@
     </nav>
     <div class="cuerpo">
         <main class="principal">
-            <div class="formulario">
+            <div class="formulario_cliente">
                 <h1 class="nombre_datos">Datos:</h1>
                 <div class="formulario_hijo">
-                    <form action="" method="post">
+                    <form action="" method="post" class="form_producto">
                         {% csrf_token %}
                         {{ form_precio }}
-                </div>
                         <button type="submit" class="guardar_registro">Guardar</button>
-                </form>
+                    </form>
+                </div>
+            </div>
+            <div class="explicacion">
+                <p>En esta sección editamos los productos.</p>
             </div>
         </main>
     </div>
