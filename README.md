@@ -28,3 +28,7 @@
 
 > Crear un área de venta donde el cliente pueda iniciar sesión, comprar él y no tenga que intervenir el "vendedor".
 > En la misma área, antes mencionada, se podría crear una sección de consulta donde el cliente envía la consulta al vendedor y este le responde por mail u otro medio.
+
+`Problemas`
+
+> Un problema que veo es que las ventas deberían estar en un JSON u otro archivo que no se pueda editar, por que al editar un producto se edita tambien la venta realizada.
