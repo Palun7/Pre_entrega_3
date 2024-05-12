@@ -24,7 +24,9 @@ body {
 }
 
 .links {
-    padding-right: 3rem;
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .link {
