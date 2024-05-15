@@ -61,9 +61,9 @@ class NuevoProducto(models.Model):
         verbose_name_plural = 'Productos'
 
 class Venta(models.Model):
-    producto = models.ForeignKey(NuevoProducto, on_delete=models.PROTECT)
-    cliente = models.ForeignKey(NuevoCliente, on_delete=models.PROTECT)
-    vendedor = models.ForeignKey(Usuario,on_delete=models.PROTECT)
+    producto = models.ForeignKey(NuevoProducto, on_delete=models.SET_NULL, null=True, blank=True)
+    cliente = models.ForeignKey(NuevoCliente, on_delete=models.SET_NULL, null=True, blank=True)
+    vendedor = models.ForeignKey(Usuario,on_delete=models.SET_NULL, null=True, blank=True)
     fecha_hora = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

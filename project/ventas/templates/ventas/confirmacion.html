@@ -1,13 +1,13 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Lista de ventas
+    Confirmación para borrar
 {% endblock title %}
 
 {% block content %}
     <nav class="contenedor_nav">
         <div class="navegador">
-            <h2 class="titulo">Listado de ventas</h2>
+            <h2 class="titulo">Eliminar producto</h2>
         </div>
         <div class="links">
             <p><a href="{% url 'core:index' %}" class="link">Inicio</a></p>
@@ -19,17 +19,15 @@
     <div class="cuerpo">
         <main class="principal">
             <div class="explicacion">
-                <p>En esta sección podemos ver las ventas realizadas.</p>
+                <p>En esta sección pedimos la confirmación para eliminar el producto.</p>
             </div>
-            <div class="lista_ventas">
-                {% for lista in lista_ventas %}
-                <ul class="lista">
-                    <li>Cliente: {{ lista.cliente }}</li>
-                    <li>Compró: {{lista.producto}}</li>
-                    <li>Vendedor: {{lista.vendedor}}</li>
-                </ul>
-                <br>
-                {% endfor %}
+            <div class="formulario_confirmacion">
+                <h2 class="formulario_h2">¿Seguro que desea eliminar {{ object.nombre }}?</h2>
+                <form method="post" class="boton_confirmacion">
+                    {% csrf_token %}
+                    <button type="submit" class="boton_confirmacion_1">Eliminar</button>
+                </form>
+                <a href="{% url 'ventas:lista_productos' %}" class="link_usuario3">Volver</a>
             </div>
         </main>
     </div>

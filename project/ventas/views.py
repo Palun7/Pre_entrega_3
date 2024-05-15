@@ -94,3 +94,9 @@ def cambiarprecio(request, pk):
         form_precio = NuevoProductoForm(instance=consulta)
     return render(request, "ventas/cambiar_precio.html", {"form_precio": form_precio})
 
+def borrarproducto(request, pk: int):
+    consulta = NuevoProducto.objects.get(id=pk)
+    if request.method == "POST":
+        consulta.delete()
+        return redirect("ventas:index")
+    return render(request, "ventas/confirmacion.html", {"object": consulta})

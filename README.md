@@ -21,11 +21,12 @@
 `Ver los datos cargados en los modelos.`
 
 > Dentro de Usuarios, NuevoProducto, NuevoCliente y Venta, se crearon views para mostrar los registros.
-> Dentro de la lista de Productos tenemos la opción de editarlos.
+> Dentro de la lista de Productos tenemos la opción de editarlos o eliminarlos.
 > Dentro de la lista de Clientes podemos buscarlos por nombre, DNI, dirección o localidad.
 
 `En un futuro se podría`
 
+> Que el vendedor tenga que iniciar sesion para poder acceder o egresar a su turno y poder vender.
 > Crear un área de venta donde el cliente pueda iniciar sesión, comprar él y no tenga que intervenir el "vendedor".
 > En la misma área, antes mencionada, se podría crear una sección de consulta donde el cliente envía la consulta al vendedor y este le responde por mail u otro medio.
 

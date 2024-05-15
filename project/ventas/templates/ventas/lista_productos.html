@@ -28,6 +28,7 @@
                     <li class="producto2">Marca: {{lista.marca}}</li>
                     <li class="producto3">Precio: ${{lista.precio}}</li>
                     <a href="{% url 'ventas:cambiar_precio' lista.id %}" class="link_usuario1">Editar</a>
+                    <a href="{% url 'ventas:confirmacion' lista.id %}" class="link_usuario2">Eliminar</a>
                 </ul>
                 <br>
                 {% endfor %}
